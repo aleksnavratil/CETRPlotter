@@ -58,8 +58,8 @@ def Load_Values(name_of_file_to_plot,directory_containing_file_to_plot):
 def Create_Plot(name_of_file_to_plot,directory_containing_file_to_plot):
         ##Do a few simple calculations that will get printed on the plot
         Rolling_Mean_of_Manual_CoF = pd.stats.moments.rolling_mean(Manually_Calculated_CoF,100)
-        Average_Manually_Calculated_CoF = float(numpy.mean(CETR_Calculated_CoF))
-        print "Average CETR CoF is",round(Average_Manually_Calculated_CoF,3),"\n"
+        Average_Manually_Calculated_CoF = float(numpy.mean(Manually_Calculated_CoF))
+        print "Average Manual CoF is",round(Average_Manually_Calculated_CoF,3),"\n"
         ##Start plotting commands here
         plt.plot(Time_Values,Manually_Calculated_CoF, label='Manual CoF')
         plt.plot(Time_Values,CETR_Calculated_CoF, label='CETR CoF')
